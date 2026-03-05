@@ -1,11 +1,32 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+	<main class="relative w-full h-[70vh] overflow-hidden">
+		<img src="/images/image-main.jpg" alt="" class="absolute inset-0 w-full h-full object-cover z-0">
+		<div class="flex items-center justify-center w-full h-full">
+			<div class="absolute border-2 border-white p-4 rounded-[27px]">
+				<h2 class="text-white text-[40px] text-main">IMMERSIVE <br> EXPERIENCES <br> THAT DELIVER</h2>
+			</div>
+		</div>
+	</main>
+
+	<section class="w-full flex flex-col items-center">
+		<img src="images/image-interactive.jpg" alt="" class="w-[70%] rounded-[30px]">
+		<div>
+			<h2>THE LEADER IN INTERACTIVE VR</h2>
+			<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa, blanditiis suscipit voluptatibus molestiae, natus aut nulla qui maiores aliquid distinctio, at exercitationem architecto sed! Eum quasi nam ut provident accusantium.</p>
+		</div>
+	</section>
 </Layout>
+
+<style>
+	main{
+		margin-bottom: 20px;
+	}
+	.text-main{
+		font-weight: 300;
+		line-height: 47px;
+	}
+</style>

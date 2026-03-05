@@ -1,3 +1,9 @@
+---
+import '../styles/global.css'
+import Navegation from '../components/navegation.astro';
+
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -6,9 +12,10 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>WorldStudios</title>
 	</head>
 	<body>
+		<Navegation/>
 		<slot />
 	</body>
 </html>
