@@ -1,0 +1,16 @@
+---
+const tarjetas = Astro.props.src
+const src = Astro.props.src
+const titulo = Astro.props.titulo
+---
+
+<div class="flex flex-wrap">
+    <div class=" w-full relative flex flex-col text-center ">
+        <div class="">
+            <img src={src} alt="" class="rounded-[20px] shadow-[0_8px_15px_rgba(14,20,72,0.5)] brightness-60 contrast-110">
+        </div>
+        <div class="absolute h-full w-full flex items-end justify-center ">
+            <p class= "text-white text-[27px] pb-15 font-light">{titulo}</p>
+        </div>
+    </div>
+</div>

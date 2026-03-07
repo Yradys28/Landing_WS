@@ -1,10 +1,47 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Tarjetas from '../components/tarjetas.astro'
+
+const TARJETAS =[
+	{
+		image:'/images/image-deep-earth.jpg',
+		nombre:"DEEP EARTH"
+	},
+	{
+		image:'/images/image-night-arcade.jpg',
+		nombre:"NIGHT ARCADE"
+	},
+	{
+		image:'/images/soccer.jpg',
+		nombre:"SOCCER TEAM VR"
+	},
+	{
+		image:'/images/image-grid.jpg',
+		nombre:"THE GRID"
+	},
+	{
+		image:'/images/image-from-above.jpg',
+		nombre:"FROM UP ABOVE VR"
+	},
+	{
+		image:'/images/image-pocket-borealis.jpg',
+		nombre:"POCKET BOREALIS"
+	},
+	{
+		image:'/images/image-curiosity.jpg',
+		nombre:"THE CURIOSITY"
+	},
+	{
+		image:'/images/image-fisheye.jpg',
+		nombre:"MAKE IT FISHEYE"
+	}
+		
+]
 ---
 
 <Layout>
 	<main class="relative w-full h-[70vh] overflow-hidden">
-		<img src="/images/image-main.jpg" alt="" class="absolute inset-0 w-full h-full object-cover z-0">
+		<img src="/images/image-main.jpg" alt="" class="absolute inset-0 w-full h-full object-cover z-0 brightness-60 contrast-100">
 		<div class="flex items-center justify-center w-full h-full">
 			<div class="absolute border-2 border-white p-4 rounded-[27px]">
 				<h2 class="text-white text-[40px] text-main">IMMERSIVE <br> EXPERIENCES <br> THAT DELIVER</h2>
@@ -12,12 +49,24 @@ import Layout from '../layouts/Layout.astro';
 		</div>
 	</main>
 
-	<section class="w-full flex flex-col items-center">
-		<img src="images/image-interactive.jpg" alt="" class="w-[70%] rounded-[30px]">
-		<div>
-			<h2>THE LEADER IN INTERACTIVE VR</h2>
-			<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa, blanditiis suscipit voluptatibus molestiae, natus aut nulla qui maiores aliquid distinctio, at exercitationem architecto sed! Eum quasi nam ut provident accusantium.</p>
+	<section class="w-full flex flex-col items-center gap-5">
+		<img src="images/image-interactive.jpg" alt="" class="w-[80%] rounded-[20px]">
+		<div class="w-full flex flex-col items-center gap-4">
+			<h2 class="w-[80%] text-[30px] text-[#191919] text-center leading-7.5">THE LEADER IN INTERACTIVE VR</h2>
+			<p class="w-[80%] text-center text-[12px] text-[#505050]">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa, blanditiis suscipit voluptatibus molestiae, natus aut nulla qui maiores aliquid distinctio, at exercitationem architecto sed! Eum quasi nam ut provident accusantium.</p>
 		</div>
+	</section>
+
+	<section class="w-full mt-8">
+		<p class="mb-10 border-2 border-[#061043] w-fit mx-auto text-center text-[#061043] py-2 px-8 rounded-3xl">OUR CREATIONS</p>
+		<div class="mb-8 w-full flex flex-wrap justify-center gap-6">
+			{TARJETAS.map((tarjeta) =>(
+				<Tarjetas src={tarjeta.image} titulo={tarjeta.nombre}/>
+				))}
+		</div>
+		<button class="block  w-fit mx-auto text-center text-[white] bg-[#061043] py-2 px-14 rounded-3xl shadow-[0_8px_15px_rgba(14,20,72,0.7)]">
+			SEE ALL
+		</button>
 	</section>
 </Layout>
 
