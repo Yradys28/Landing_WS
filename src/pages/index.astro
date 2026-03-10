@@ -40,42 +40,45 @@ const TARJETAS =[
 ---
 
 <Layout>
-	<main class="relative w-full h-[70vh] overflow-hidden">
-		<img src="/images/image-main.jpg" alt="" class="absolute inset-0 w-full h-full object-cover z-0 brightness-60 contrast-100">
-		<div class="flex items-center justify-center w-full h-full">
-			<div class="absolute border-2 border-white p-4 rounded-[27px]">
-				<h2 class="text-white text-[40px] text-main">IMMERSIVE <br> EXPERIENCES <br> THAT DELIVER</h2>
-			</div>
-		</div>
-	</main>
+    <main class="relative w-full h-[80vh] overflow-hidden mb-15 xl:mb-32.5">
+        <img src="/images/image-main.jpg" alt="Hero" class="absolute inset-0 w-full h-full object-cover z-0 brightness-60">
+        
+        <div class="relative flex items-center justify-center w-full h-full xl:justify-start xl:pl-[8%] xl:pt-[5%]">
+            <div class="w-[80%] border-2 border-white p-4 xl:p-[2%] xl:w-[45%]">
+                <h2 class="text-white text-[45px] font-light leading-11.25 sm:text-[50px] sm:leading-12.5 xl:text-[63px] xl:leading-15">
+                    IMMERSIVE <br> EXPERIENCES <br> THAT <br> DELIVER
+                </h2>
+            </div>
+        </div>
+    </main>
 
-	<section class="w-full flex flex-col items-center gap-5">
-		<img src="images/image-interactive.jpg" alt="" class="w-[80%] rounded-[20px]">
-		<div class="w-full flex flex-col items-center gap-4">
-			<h2 class="w-[80%] text-[30px] text-[#191919] text-center leading-7.5">THE LEADER IN INTERACTIVE VR</h2>
-			<p class="w-[80%] text-center text-[12px] text-[#505050]">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa, blanditiis suscipit voluptatibus molestiae, natus aut nulla qui maiores aliquid distinctio, at exercitationem architecto sed! Eum quasi nam ut provident accusantium.</p>
-		</div>
-	</section>
+    <section class="w-full flex flex-col items-center gap-10 mb-17.5 lg:flex-row lg:items-end lg:gap-0">
+        <img src="images/image-interactive.jpg" alt="Interactive VR" 
+             class="w-[87%] md:w-[80%] lg:w-[50%] lg:translate-x-17.5 xl:w-[45%] xl:translate-x-31.25">
+        
+        <div class="w-full flex flex-col items-center gap-4 lg:w-[45%] lg:-translate-x-10 lg:bg-white lg:p-[40px_30px_0_40px] xl:p-[90px_40px_20px_40px]">
+            <h2 class="w-[80%] text-[37px] text-black text-center leading-8.75 font-light sm:text-[43px] sm:leading-10.75 lg:text-[40px] xl:text-[60px] xl:leading-15">
+                THE LEADER IN INTERACTIVE VR
+            </h2>
+            <p class="w-[80%] text-center text-[13px] text-[#505050] xl:text-[16px]">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas, delectus asperiores optio officiis dicta, aspernatur rerum sed harum ullam voluptatum et accusantium sunt ea iusto a.
+            </p>
+        </div>
+    </section>
 
-	<section class="w-full mt-8">
-		<p class="mb-10 border-2 border-[#061043] w-fit mx-auto text-center text-[#061043] py-2 px-8 rounded-3xl">OUR CREATIONS</p>
-		<div class="mb-8 w-full flex flex-wrap justify-center gap-6">
-			{TARJETAS.map((tarjeta) =>(
-				<Tarjetas src={tarjeta.image} titulo={tarjeta.nombre}/>
-				))}
-		</div>
-		<button class="block  w-fit mx-auto text-center text-[white] bg-[#061043] py-2 px-14 rounded-3xl shadow-[0_8px_15px_rgba(14,20,72,0.7)]">
-			SEE ALL
-		</button>
-	</section>
+    <section class="w-full mt-8 mb-25 xl:mt-33.75">
+        <p class="mb-2 w-fit mx-auto text-center text-black py-2 px-8 text-[33px] font-light tracking-[4px] sm:text-[40px] xl:text-[53px]">
+            OUR CREATIONS
+        </p>
+        
+        <div class="mb-8 w-full flex flex-wrap justify-center gap-6 xl:gap-7.5">
+            {TARJETAS.map((tarjeta) => (
+                <Tarjetas src={tarjeta.image} titulo={tarjeta.nombre}/>
+            ))}
+        </div>
+
+        <p class="border-2 border-[#1e1d1d] mb-2 w-fit mx-auto text-center text-[#1e1d1d] py-2 px-14 text-[16px] cursor-pointer hover:bg-black hover:text-white transition-colors xl:text-[20px] xl:px-21.5 xl:py-3">
+            SEE ALL
+        </p>
+    </section>
 </Layout>
-
-<style>
-	main{
-		margin-bottom: 20px;
-	}
-	.text-main{
-		font-weight: 300;
-		line-height: 47px;
-	}
-</style>

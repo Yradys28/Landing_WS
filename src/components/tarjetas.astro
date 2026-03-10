@@ -4,13 +4,39 @@ const src = Astro.props.src
 const titulo = Astro.props.titulo
 ---
 
-<div class="flex flex-wrap">
-    <div class=" w-full relative flex flex-col text-center ">
+<div class="w-[87%] tarjeta">
+    <div class="w-full relative flex flex-col text-center">
         <div class="">
-            <img src={src} alt="" class="rounded-[20px] shadow-[0_8px_15px_rgba(14,20,72,0.5)] brightness-60 contrast-110">
+            <img src={src} alt="" class="w-full h-33 object-cover shadow-[0_8px_15px_rgba(14,20,72,0.7)] brightness-60 contrast-110 image-tarjeta">
         </div>
         <div class="absolute h-full w-full flex items-end justify-center ">
-            <p class= "text-white text-[27px] pb-15 font-light">{titulo}</p>
+            <p class= "text-white text-[25px] pb-13 font-light tittle-tarjeta">{titulo}</p>
         </div>
     </div>
 </div>
+
+<style>
+    @media(min-width:610px){
+        .tarjeta{
+            width: auto;
+        }
+
+        .image-tarjeta{
+            height: auto;
+        }
+    }
+
+    @media(min-width:610px){
+        .tarjeta{
+            width: 20%;
+        }
+    }
+
+    @media(min-width:1280px){
+        .tittle-tarjeta{
+            font-weight: 300;
+            font-size: 35px;
+        }
+
+        }
+</style>

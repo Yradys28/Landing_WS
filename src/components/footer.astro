@@ -1,10 +1,60 @@
-<div class="mt-10 w-full bg-[black] flex flex-col items-center gap-6">
-    <img src="/images/WS2-logo.png" alt="" class="w-[40%]">
-    <div class="flex gap-3">
-        <img src="/images/icon-facebook.svg" alt="">
-        <img src="/images/icon-instagram.svg" alt="">
-        <img src="/images/icon-pinterest.svg" alt="">
-        <img src="/images/icon-twitter.svg" alt="">
-    </div>
-    <p class="text-[#777676]">2026 WorldStudios. All rights reserved</p>
+<div class="mt-10 w-full bg-[black] flex flex-col items-center gap-6 flex-footer">
+        <img src="/images/WS2-logo.png" alt="" class="w-[40%] logo">
+        <div class="flex gap-3 border-2 w-fit cont-icon">
+            <img src="/images/icon-facebook.svg" alt="" class="icon">
+            <img src="/images/icon-instagram.svg" alt="" class="icon">
+            <img src="/images/icon-pinterest.svg" alt="" class="icon">
+            <img src="/images/icon-twitter.svg" alt="" class="icon">
+        </div>
+        <p class="text-[#777676] w-fit">2026 WorldStudios. All rights reserved</p>
 </div>
+
+<style>
+    @media(min-width:640px){
+        .logo{
+            width: 25%;
+        }
+
+        .flex-footer{
+            padding:25px 0px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+    }
+
+    @media(min-width:760px){
+        .flex-footer{
+            gap:50px;    
+        }
+
+        .logo{
+            width: 20%;
+
+        }
+        .icon{
+            width: 33px;
+        }
+
+        .cont-icon{
+            gap:20px;
+        }
+    }
+
+	@media(min-width:1280px){
+        .flex-footer{
+            padding: 25px 70px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .logo{
+            width: 15%;
+        }
+        .icon{
+            width: 43px;
+        }
+        .cont-icon{
+            gap:30px;
+        }
+
+</style>
